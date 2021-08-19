@@ -52,7 +52,7 @@ A simple example of training a classifier for digit recognition (MNIST):
 python run.py
 ```
 
-The we got the outputs:
+Then we got the outputs:
 
 ```
 INFO - pytorch - Running command 'run'
@@ -84,6 +84,8 @@ The checkpoints, experiment config, recorded metrics, enviornment info and all o
 
 The source code will backup in ./output/_sources
 
+### Output file structure
+
 ```
 
 ├── output
@@ -98,19 +100,25 @@ The source code will backup in ./output/_sources
 │       ├── main_2a180b6f96d317238aac22fcf5d07dfa.py            # backup code
 │       ├── network_4790c945aa7e76e2a6dd58e5038218dd.py         # backup code
 │       └── run_a041462fa92b192a8aec23efcca8a38b.py             # backup code
-
 ```
 
 ## File structure
 
 ```
-
-run.py               # The entry point. (parameter and environment settings, Sacred config)
-network.py           # Network design (networks, loss functions)
-main.py              # Training and testing scripts
-utils.py             # Some convenience functions
-data.py              # Data modules
-
+├── data                    # Data dir
+│   └── MNIST
+├── data.py                 # Data modules
+├── LICENSE
+├── main.py                 # Training and testing scripts
+├── network.py              # Network design (networks, loss functions)
+├── output                  # Experiment output
+│   ├── 1
+│   ├── 2
+│   └── _sources
+├── README.md
+├── requirements.txt
+├── run.py                  # The entry point. (parameter and environment settings, Sacred config)
+└── utils.py                # Some convenience functions
 ```
 
 ## Contributions
